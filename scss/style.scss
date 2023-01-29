@@ -1,0 +1,53 @@
+﻿/* ------------------------------------------------ */
+//
+@font-face {
+  font-family: 'Barlow-Bold';
+  src: url('fonts/Barlow-Bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Barlow-Light';
+  src: url('fonts/Barlow-Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Barlow-Regular';
+  src: url('fonts/Barlow-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Barlow-Medium';
+  src: url('fonts/Barlow-Medium.otf') format('opentype');
+}
+
+:root {
+  --color-body-bg: #eff6ff;
+  --color-body-text: #2a4a5c;
+  --color-button-fb: #255a9b;
+  --color-button-in: #0076b6;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Barlow-Regular', 'Open Sans', sans-serif;
+  color: var(--color-body-text);
+  background: var(--color-body-bg);
+}
+
+@media only screen and (max-width: 1230px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------------ */
+@import 'main';
