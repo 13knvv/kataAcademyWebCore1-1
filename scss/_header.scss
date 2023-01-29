@@ -1,0 +1,19 @@
+
+header {
+  position: relative;
+  background-image: url("../img/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 53%;
+  min-height: 100%;
+
+  img {
+    position: absolute;
+    top: 2.2rem;
+    left: 2.8rem;
+    height: 1.5rem;
+  }
+}
+
+

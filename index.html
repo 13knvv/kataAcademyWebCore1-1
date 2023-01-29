@@ -1,36 +1,57 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="discription" content="Задание для определения уровня знаний верстки" />
-    <meta name="keywords" content="тз, kata, acedemy, задание">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="discription"
+      content="Задание для определения уровня знаний верстки"
+    />
+    <meta name="keywords" content="тз, kata, acedemy, задание" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>iintoo</title>
-</head>
+  </head>
 
-<body>
-  
-  <main>
-  </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
+  <body>
+    <div class="wrapper">
+      <header>
+        <img src="svg/logo.svg" alt="logo iintoo">
+      </header>
+      <main>
+        <h1>Get iintoo it today</h1>
+        <div>There is no charge or obligation upon registration.</div>
+        <div class="buttons">
+          <button class="buttons__btn buttons__btn_fb">
+            <img src="svg/facebook.svg" alt="facebook logo">
+            <span>Register with Facebook</span>
+          </button>
+          <button class="buttons__btn buttons__btn_in">
+            <img src="svg/linkedin.svg" alt="linkedin logo">
+            <span>Register with Linkedin</span>
+          </button>
+        </div>
+        <div class="or">
+          <div class="or__line"></div>
+          <div class="or__text">OR</div>
+          <div class="or__line"></div>
+        </div>
+        <form class="reg-form">
+          <div class="reg-form__field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+          </div>
+          <div class="reg-form__field">
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone">
+          </div>
+        </form>
+        <div class="type-investor">
+          <h2>What type of investor are you?</h2>
+          <div class="type-investor__sub-title">Select the type of investor you are below.</div>
+        </div>
+        
+      </main>
+    </div>
+  </body>
 </html>

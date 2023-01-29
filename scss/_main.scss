@@ -1,14 +1,99 @@
-/* main */
-//
+main {
+  background-color: var(--color-main-bg);
+  width: 47%;
+  padding: 4.9rem 3.7rem;
+  padding-right: 4.1rem;
+}
 
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
 
+  &__btn {
+    display: flex;
+    align-items: center;
+    border: none;
+    font-family: 'Barlow-Light', 'Open Sans', sans-serif;
+    font-size: 0.7rem;
+    color: #ffffff;
+    padding: 0.65rem;
+    width: 47%;
 
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 0px 8px 4px rgba(34, 60, 80, 0.2);
+      transition: all 0.3s;
+    }
 
+    img {
+      width: 1rem;
+      margin-right: 0.7rem;
+    }
 
+    &_fb {
+      background-color: var(--color-button-fb);
+    }
 
+    &_in {
+      background-color: var(--color-button-in);
+    }
+  }
+}
 
+.or {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.7rem 0 2.25rem;
 
+  &__line {
+    width: 6rem;
+    border-top: 0.2px solid var(--color-border-light);
+  }
 
+  &__text {
+    font-size: 0.7rem;
+    color: var(--color-text-light);
+    margin: 0 0.3rem;
+  }
+}
 
+.reg-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
 
-/* main end */
+  &__field {
+    position: relative;
+    width: 47%;
+    height: 3.1rem;
+    
+    label {
+      position: absolute;
+      top: 0.3rem;
+      left: 0.6rem;
+      font-size: 0.7rem;
+    }
+
+    input {
+      width: 100%;
+      height: 100%;
+      border: 1px solid var(--color-border-light);
+      font-size: 0.9rem;
+      padding: 0.9rem 0 0 0.6rem;
+
+      &:focus {
+        outline: none;
+        border-left: 1.5px solid var(--color-button-create);
+      }
+    }
+  }
+}
+
+.type-investor {
+  &__sub-title {
+    font-size: 0.75rem;
+  }
+
+}
