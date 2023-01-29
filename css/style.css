@@ -135,10 +135,10 @@ main {
   width: 1rem;
   margin-right: 0.7rem;
 }
-.buttons__btn_fb {
+.buttons__btn--fb {
   background-color: var(--color-button-fb);
 }
-.buttons__btn_in {
+.buttons__btn--in {
   background-color: var(--color-button-in);
 }
 
