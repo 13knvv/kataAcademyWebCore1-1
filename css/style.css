@@ -22,7 +22,7 @@
   --color-button-fb: #255a9b;
   --color-button-in: #0076b6;
   --color-button-create: #3698FB;
-  --color2: #7B8A92;
+  --color-text-medium: #7B8A92;
   --color3: #96A5B1;
   --color-text-light: #AFAFAF;
   --color-border-light: #EEEEEE;
@@ -77,6 +77,14 @@ h2 {
     width: 90%;
   }
 }
+@media only screen and (max-width: 800px) {
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 /* ------------------------------------------------ */
 header {
   position: relative;
@@ -86,6 +94,9 @@ header {
   background-size: cover;
   width: 53%;
   min-height: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 2 auto;
+          flex: 0 2 auto;
 }
 header img {
   position: absolute;
@@ -94,13 +105,34 @@ header img {
   height: 1.5rem;
 }
 
+@media only screen and (max-width: 800px) {
+  header {
+    width: 100%;
+    height: 200px;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    background-position: left center;
+  }
+}
 main {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 0 500px;
+          flex: 2 0 500px;
   background-color: var(--color-main-bg);
   width: 47%;
   padding: 4.9rem 3.7rem;
   padding-right: 4.1rem;
 }
 
+@media only screen and (max-width: 800px) {
+  main {
+    width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+}
 .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -123,13 +155,17 @@ main {
   color: #ffffff;
   padding: 0.65rem;
   width: 47%;
-}
-.buttons__btn:hover {
-  cursor: pointer;
-  -webkit-box-shadow: 0px 0px 8px 4px rgba(34, 60, 80, 0.2);
-          box-shadow: 0px 0px 8px 4px rgba(34, 60, 80, 0.2);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  cursor: pointer;
+}
+.buttons__btn:hover, .buttons__btn:focus {
+  -webkit-box-shadow: 0px 0px 8px 4px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 0px 8px 4px rgba(34, 60, 80, 0.2);
+}
+.buttons__btn:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .buttons__btn img {
   width: 1rem;
@@ -164,7 +200,7 @@ main {
   margin: 0 0.3rem;
 }
 
-.reg-form {
+.reg-data {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,29 +209,164 @@ main {
           justify-content: space-between;
   margin-bottom: 3rem;
 }
-.reg-form__field {
+.reg-data__field {
   position: relative;
   width: 47%;
   height: 3.1rem;
 }
-.reg-form__field label {
+.reg-data__field label {
   position: absolute;
   top: 0.3rem;
   left: 0.6rem;
   font-size: 0.7rem;
 }
-.reg-form__field input {
+.reg-data__field input {
   width: 100%;
   height: 100%;
   border: 1px solid var(--color-border-light);
   font-size: 0.9rem;
   padding: 0.9rem 0 0 0.6rem;
 }
-.reg-form__field input:focus {
+.reg-data__field input:hover, .reg-data__field input:focus {
   outline: none;
   border-left: 1.5px solid var(--color-button-create);
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 0px 8px 2px rgba(34, 60, 80, 0.2);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-.type-investor__sub-title {
+.type-investor {
   font-size: 0.75rem;
+  margin-bottom: 3rem;
+}
+.type-investor h3 {
+  margin-bottom: 2.65em;
+  color: var(--color-text-medium);
+}
+.type-investor__radio-wrapp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+.type-investor label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  position: relative;
+  padding-left: 2.3em;
+  padding-right: 1em;
+}
+.type-investor input {
+  position: absolute;
+  left: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.type-investor input::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 1.5px solid var(--color-text-light);
+  border-radius: 50%;
+}
+.type-investor input:hover::before {
+  border: 1.5px solid black;
+}
+.type-investor input:checked::before {
+  border: 3px solid var(--color-button-create);
+}
+.type-investor__help {
+  font-size: 0.7em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid var(--color-text-light);
+  border-radius: 50%;
+  width: 1.3em;
+  height: 1.3em;
+  margin-left: 1em;
+  color: var(--color-text-light);
+}
+.type-investor__modal {
+  font-size: 1.3em;
+  color: #ffffff;
+  display: none;
+  position: absolute;
+  left: 1.3em;
+  bottom: 1.4em;
+  min-width: 10em;
+  padding: 0.6em;
+  background-color: rgb(114, 113, 113);
+  border-radius: 0.3em;
+  -webkit-box-shadow: -2px 2px 2px 2px rgba(34, 60, 80, 0.2);
+          box-shadow: -2px 2px 2px 2px rgba(34, 60, 80, 0.2);
+}
+.type-investor__help:hover .type-investor__modal {
+  display: block;
+}
+.type-investor__info {
+  color: var(--color-text-light);
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 0px 8px 1px rgba(34, 60, 80, 0.2);
+  width: 15rem;
+  padding: 0.6rem;
+}
+
+.agree {
+  font-size: 0.7rem;
+  margin-bottom: 3rem;
+}
+.agree label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.agree input {
+  margin-right: 1em;
+}
+.agree a {
+  color: var(--color-button-create);
+}
+
+.button-create {
+  font-size: 0.8rem;
+  color: #ffffff;
+  background-color: var(--color-button-create);
+  border: none;
+  padding: 0.65rem 4rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.button-create:hover, .button-create:focus {
+  -webkit-box-shadow: 0px 0px 8px 4px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 0px 8px 4px rgba(34, 60, 80, 0.2);
+}
+.button-create:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
