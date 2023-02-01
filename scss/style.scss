@@ -23,11 +23,11 @@
   --color-body-text: #2a4a5c;
   --color-button-fb: #255a9b;
   --color-button-in: #0076b6;
-  --color-button-create: #3698FB;
-  --color-text-medium: #7B8A92;
-  --color3: #96A5B1;
-  --color-text-light: #AFAFAF;
-  --color-border-light: #EEEEEE;
+  --color-button-create: #3698fb;
+  --color-text-medium: #7b8a92;
+  --color3: #96a5b1;
+  --color-text-light: #afafaf;
+  --color-border-light: #eeeeee;
   box-sizing: border-box;
 }
 
@@ -72,13 +72,22 @@ h2 {
 
 @media only screen and (max-width: 1360px) {
   .wrapper {
-    width: 90%
+    width: 90%;
   }
 }
 
 @media only screen and (max-width: 800px) {
   .wrapper {
     flex-direction: column;
+    width: 95%;
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .wrapper {
+    width: 100%;
+    margin: 0;
   }
 }
 

@@ -10,6 +10,22 @@ main {
   main {
     width: 100%;
     flex: none;
+    padding: 1.5rem 3rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  main {
+    padding: 0.5rem 2rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  main {
+    padding: 0.5rem 1.5rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -50,6 +66,22 @@ main {
 
     &--in {
       background-color: var(--color-button-in);
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    & {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__btn {
+      width: 270px;
+      justify-content: center;
+    }
+
+    &__btn:nth-child(1) {
+      margin-bottom: 1rem;
     }
   }
 }
@@ -105,6 +137,21 @@ main {
       }
     }
   }
+
+  @media only screen and (max-width: 500px) {
+    & {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__field {
+      width: 270px;
+    }
+
+    &__field:nth-child(1) {
+      margin-bottom: 1rem;
+    }
+  }
 }
 
 .type-investor {
@@ -128,6 +175,17 @@ main {
     position: relative;
     padding-left: 2.3em;
     padding-right: 1em;
+  }
+
+  @media only screen and (max-width: 800px) {
+    &__radio-wrapp {
+      flex-direction: column;
+    }
+
+    label {
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
   }
 
   input {
@@ -231,5 +289,12 @@ main {
 
   &:active {
     box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .just-center {
+    display: flex;
+    justify-content: center;
   }
 }
